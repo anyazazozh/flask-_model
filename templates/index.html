@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+        <form action="/process" method="POST">
+            <div>
+            <label for="say">upload dog or cat photo</label>
+            <input type="file" accept="image/jpg, image/jpeg" class="input_image" name="image" id="say"  />
+            </div>
+            <div>
+            <button type="submit">Send</button>
+            </div>
+        </form>
+    {% endblock %}
+
+</body>
+</html>
