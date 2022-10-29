@@ -15,4 +15,9 @@ def process():
     imagefile = request.files.get('image')
     full_name = os.path.join(os.getcwd(), 'files', imagefile.filename)
     imagefile.save(full_name)
-    return str(img_input(full_name))
+    result = str(img_input(full_name))
+    return render_template('index_2.html', result = result, imagefile = imagefile)
+
+
+if __name__ == "__main__":
+    app.run(debug = True)
