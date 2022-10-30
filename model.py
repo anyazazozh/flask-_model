@@ -17,9 +17,9 @@ def img_input(img_path):
   pred = round(prediction[0][0],2)
 
   if prediction > 0.5:
-    res = 'This is a dog with '+str(pred)+' possibility'
+    res = 'This is a dog with '+str(pred)+' probability'
   else:
-    res = 'This is a cat with '+str(round(1-pred,2))+' possibility'
+    res = 'This is a cat with '+str(round(1-pred,2))+' probability'
 
   return res
 
